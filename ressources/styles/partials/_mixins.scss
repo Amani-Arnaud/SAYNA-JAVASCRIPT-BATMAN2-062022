@@ -1,0 +1,20 @@
+/* DEFINITION DES VARIABLE LOCALES */
+
+$bg-home: url('../assets/Illustrations/Bathome1.png');
+$bg-game: url('../assets/Illustrations/Bathome1.png');
+
+/* FIN VARIABLE LOCALES*/
+
+
+/* DEFINITION DES FONCTION DE PROPRIETE */
+
+@mixin page_bg($image) {
+    background: $image;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 100%;
+    background-color: black;
+}
+
+
+/* FIN VARIABLE LOCALES*/

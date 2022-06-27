@@ -1,0 +1,40 @@
+/* DEFINITION des propriétés FOOTER ####################*/
+
+.footer {
+    border-top: 0;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    .space-wb {
+        margin: auto;
+        text-align: center;
+        margin: 20px;
+        p {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+            font-size: 11px;
+            text-align: center;
+        }
+        img {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .img-footer {
+        margin: auto;
+        text-align: center;
+        .social {
+            img {
+                margin: 15px;
+            }
+        }
+    }
+    .logo-footer {
+        display: inline-block;
+        margin: 10px;
+        img {
+            vertical-align: middle;
+            margin: 5px;
+        }
+    }
+}

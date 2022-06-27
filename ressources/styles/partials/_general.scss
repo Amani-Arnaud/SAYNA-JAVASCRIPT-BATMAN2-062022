@@ -1,0 +1,55 @@
+@use './colors' as colors;
+@import './typographie';
+
+/* attribution des fonts aux balises prédefinir*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Rajdhani-Medium';
+    font-size: 36px;
+    color: colors.$white;
+}
+
+h2 {
+    font-family: 'SpaceGrotesk-Regular';
+    font-size: 22px;
+}
+
+p {
+    font-family: 'SpaceGrotesk-Regular';
+    text-align: justify;
+    color: colors.$white;
+    font-size: 22px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: colors.$white;
+    font-family: 'Rajdhani-Medium';
+    font-size: 20px;
+    text-align: center;
+    margin: 15px;
+    padding: 10px;
+    background-image: colors.$btn-gradient;
+    width: 200px;
+    &:hover {
+        transition: 5s;
+        background-image: linear-gradient(to right, #eddebf, #890009);
+    }
+}
+
+.container {
+    margin: auto;
+    width: 85%;
+    border: 3px solid colors.$page-border;
+}
+
+.main {
+    border-bottom: 0;
+}
