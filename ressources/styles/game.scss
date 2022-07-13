@@ -1,0 +1,80 @@
+/* IMPORTATION DES MODULES*/
+
+@use './partials/colors' as colors;
+@import './partials/general';
+@import './partials/mixins';
+@import './partials/header';
+@import './partials/footer';
+
+/* FIN D'IMPORTATION DE MODULE*/
+
+
+/*PROPRIETE DE LA PAGE GAME*/
+
+body {
+    @include page_bg($bg-game);
+}
+
+
+/* DEFINITION des propriété de la section Into ####################*/
+
+.intro-main {
+    position: relative;
+    .intro {
+        margin: auto;
+        margin-top: 250px;
+        // width: 600px;
+        text-align: center;
+        .content {
+            h1 {
+                margin-left: 10%;
+                text-align: justify;
+                text-transform: uppercase;
+                font-size: 4em;
+            }
+        }
+        .icon-down {
+            margin-top: 300px;
+        }
+    }
+    .logo-content {
+        position: fixed;
+        top: 45vh;
+        right: 3.5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            padding: 10px;
+        }
+    }
+}
+
+
+/* FIN section Intro ############################# */
+
+// DEFINITION des propriété de la section QUIZ
+.intro-quiz {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    .btn-quiz {
+        text-decoration: none;
+        color: colors.$white;
+        font-family: 'Rajdhani-Medium';
+        padding: 20px 15px;
+        text-transform: uppercase;
+        width: 300px;
+        font-size: 1.5em;
+        background-image: linear-gradient(to right, rgba(137, 0, 9, 0.60), colors.$yellow-second);
+        &:hover {
+            transition: 5s;
+            background-image: colors.$btn-gradient;
+        }
+    }
+}
+
+// FIN SECTION QUIZ

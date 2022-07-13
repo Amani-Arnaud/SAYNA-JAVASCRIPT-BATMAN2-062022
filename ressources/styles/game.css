@@ -1,0 +1,247 @@
+@charset "UTF-8";
+/* IMPORTATION DES MODULES*/ /* DEFINITION DES TYPOGRAPHIES  ET PROPRIETES GENERALES ###########*/
+@font-face {
+  font-family: "Rajdhani-Medium";
+  font-style: medium;
+  src: url("fonts/Rajdhani-Medium.ttf");
+}
+@font-face {
+  font-family: "SpaceGrotesk-Bold";
+  font-style: bold;
+  src: url("fonts/SpaceGrotesk-Bold.ttf");
+}
+@font-face {
+  font-family: "SpaceGrotesk-Regular";
+  src: url("fonts/SpaceGrotesk-Regular.ttf");
+}
+/* attribution des fonts aux balises prédefinir*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Rajdhani-Medium";
+  font-size: 36px;
+  color: #FFFFFF;
+}
+
+h2 {
+  font-family: "SpaceGrotesk-Regular";
+  font-size: 22px;
+}
+
+p {
+  font-family: "SpaceGrotesk-Regular";
+  text-align: justify;
+  color: #FFFFFF;
+  font-size: 22px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: "Rajdhani-Medium";
+  font-size: 20px;
+  text-align: center;
+  margin: 15px;
+  padding: 20px 10px;
+  background-image: linear-gradient(to right, rgba(237, 222, 191, 0.4), rgba(137, 0, 9, 0.6));
+  width: 200px;
+}
+.btn:hover {
+  transition: 5s;
+  background-image: linear-gradient(to right, #eddebf, #890009);
+}
+
+.container {
+  margin: auto;
+  width: 85%;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.main {
+  border-bottom: 0;
+}
+
+.yellow-hover:hover {
+  filter: invert(18%) sepia(82%) saturate(4658%) hue-rotate(355deg) brightness(109%) contrast(112%);
+}
+
+.popup {
+  position: fixed;
+  display: flex;
+  top: 20vh;
+  left: 10vw;
+  width: 80%;
+  height: 60vh;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  display: none;
+}
+.popup-box {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 80%;
+  background-color: black;
+  border-radius: 30px;
+  background-image: linear-gradient(to bottom right, rgba(237, 222, 191, 0.4), rgba(25, 88, 125, 0.4));
+}
+.popup-box p {
+  text-transform: uppercase;
+}
+
+/* DEFINITION DES VARIABLE LOCALES */
+/* FIN VARIABLE LOCALES*/
+/* DEFINITION DES FONCTION DE PROPRIETE */
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* FIN VARIABLE LOCALES*/
+/* STYLE DE HEADER ###############*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px;
+  margin-bottom: 60px;
+}
+.header .menu a {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: inline-block;
+  margin-left: 10px;
+  font-family: "Rajdhani-Medium";
+  font-size: 36px;
+  font-style: normal;
+}
+.header .menu .active,
+.header .menu a:hover {
+  text-decoration: underline;
+  font-style: bold;
+}
+
+/* DEFINITION des propriétés FOOTER ####################*/
+.footer {
+  border-top: 0;
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+.footer .space-wb {
+  margin: auto;
+  text-align: center;
+  margin: 20px;
+}
+.footer .space-wb p {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  font-size: 11px;
+  text-align: center;
+}
+.footer .space-wb img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.footer .img-footer {
+  margin: auto;
+  text-align: center;
+}
+.footer .img-footer .social img {
+  margin: 15px;
+}
+.footer .logo-footer {
+  display: inline-block;
+  margin: 10px;
+}
+.footer .logo-footer img {
+  vertical-align: middle;
+  margin: 5px;
+}
+
+/* FIN D'IMPORTATION DE MODULE*/
+/*PROPRIETE DE LA PAGE GAME*/
+body {
+  background: url("../assets/game/Batgame_1.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 100%;
+  background-color: black;
+}
+
+/* DEFINITION des propriété de la section Into ####################*/
+.intro-main {
+  position: relative;
+}
+.intro-main .intro {
+  margin: auto;
+  margin-top: 250px;
+  text-align: center;
+}
+.intro-main .intro .content h1 {
+  margin-left: 10%;
+  text-align: justify;
+  text-transform: uppercase;
+  font-size: 4em;
+}
+.intro-main .intro .icon-down {
+  margin-top: 300px;
+}
+.intro-main .logo-content {
+  position: fixed;
+  top: 45vh;
+  right: 3.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.intro-main .logo-content img {
+  padding: 10px;
+}
+
+/* FIN section Intro ############################# */
+.intro-quiz {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.intro-quiz .btn-quiz {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: "Rajdhani-Medium";
+  padding: 20px 15px;
+  text-transform: uppercase;
+  width: 300px;
+  font-size: 1.5em;
+  background-image: linear-gradient(to right, rgba(137, 0, 9, 0.6), #F8F184);
+}
+.intro-quiz .btn-quiz:hover {
+  transition: 5s;
+  background-image: linear-gradient(to right, rgba(237, 222, 191, 0.4), rgba(137, 0, 9, 0.6));
+}/*# sourceMappingURL=game.css.map */

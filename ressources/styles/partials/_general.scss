@@ -6,7 +6,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 h1 {
@@ -35,7 +34,7 @@ p {
     font-size: 20px;
     text-align: center;
     margin: 15px;
-    padding: 10px;
+    padding: 20px 10px;
     background-image: colors.$btn-gradient;
     width: 200px;
     &:hover {
@@ -52,4 +51,36 @@ p {
 
 .main {
     border-bottom: 0;
+}
+
+.yellow-hover:hover {
+    filter: invert(18%) sepia(82%) saturate(4658%) hue-rotate(355deg) brightness(109%) contrast(112%);
+}
+
+.popup {
+    position: fixed;
+    display: flex;
+    top: 20vh;
+    left: 10vw;
+    width: 80%;
+    height: 60vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    &-box {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 80%;
+        background-color: black;
+        border-radius: 30px;
+        background-image: linear-gradient(to bottom right, rgba(237, 222, 191, 0.40), rgba(25, 88, 125, 0.40));
+        p {
+            text-transform: uppercase;
+        }
+    }
+    // visibilite nulle 
+    display: none;
+    // .//
 }

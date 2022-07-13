@@ -1,7 +1,7 @@
 /* DEFINITION DES VARIABLE LOCALES */
 
 $bg-home: url('../assets/Illustrations/Bathome1.png');
-$bg-game: url('../assets/Illustrations/Bathome1.png');
+$bg-game: url('../assets/game/Batgame_1.png');
 
 /* FIN VARIABLE LOCALES*/
 
@@ -14,6 +14,22 @@ $bg-game: url('../assets/Illustrations/Bathome1.png');
     background-position: 0px 0px;
     background-size: 100%;
     background-color: black;
+}
+
+@mixin fadeIn() {
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 

@@ -7,21 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="Formation Talent For StartUp 2022; Projet Fil Rouge BATMAN partie 2 [Amani-Arnaud (C.I)]">
     <meta name="description" content="Projet fil rouge partie BATMAN PART 2 | formation Talent For StartUp 2022 | SAYNA">
-    <meta name="author" content="Amanianh'sah">
+    <meta name="author" content="SIETIE">
     <title>PROJET BATMAN partie 2 | HOME</title>
     <link rel="stylesheet" href="./ressources/styles/home.css">
 </head>
 
 <body>
+
+    <!-- POPUP BOX -->
+    <div class="popup" id="popup">
+        <div class="popup-box">
+            <p>Message reçu !</p>
+        </div>
+    </div>
+    <!-- FIN POPUP BOX -->
     <!-- ENTÊTE DE LA PAGE -->
     <header id="header">
         <div class="container">
 
             <div class="header">
-                <img src="ressources/Assets/Logos/logohome.png" alt="logo home">
+                <img src="ressources/Assets/Logos/logohome.png" alt="logo home" class="yellow-hover">
                 <div class="menu">
-                    <a class="Accueil active" href="#">HOME</a>
-                    <a class="Accueil" href="#">GAME</a>
+                    <a class="Accueil active" href="index.html">HOME</a>
+                    <a class="Accueil" href="game.html">GAME</a>
                     <!-- <ul>
                         <li><a class="Accueil active" href="#">HOME</a></li>
                         <li><a class="Accueil" href="#">GAME</a></li>
@@ -61,11 +69,11 @@
             </div>
 
             <div class="logo-content">
-                <a href="#header"><img src="ressources/Assets/Logos/logo_bat_flèche.png" alt="fleche haut" class="arrow up"></a>
-                <img src="ressources/Assets/Logos/icon_facebook.png" alt="icon facebook" class="social-logo">
-                <img src="ressources/Assets/Logos/icon_ig.png" alt="icon instagrame" class="social-logo">
-                <img src="ressources/Assets/Logos/icon_tw.png" alt="icon twitter" class="social-logo">
-                <a href="#contact"><img src="ressources/Assets/Logos/logo_bat_flèche_2.png" alt="icon twitter" class="arrow down"></a>
+                <a href="#header"><img src="ressources/Assets/Logos/logo_bat_flèche.png" alt="fleche haut" class="arrow up yellow-hover"></a>
+                <img src="ressources/Assets/Logos/icon_facebook.png" alt="icon facebook" class="social-logo yellow-hover">
+                <img src="ressources/Assets/Logos/icon_ig.png" alt="icon instagrame" class="social-logo yellow-hover">
+                <img src="ressources/Assets/Logos/icon_tw.png" alt="icon twitter" class="social-logo yellow-hover">
+                <a href="#contact"><img src="ressources/Assets/Logos/logo_bat_flèche_2.png" alt="icon twitter" class="arrow down yellow-hover"></a>
             </div>
             <!-- FIN section intro -->
         </section>
@@ -235,8 +243,6 @@
                     <img src="ressources/Assets/Logos/icon_flèche_2.png" alt="fleche suivante">
                 </a>
             </div>
-
-
         </section>
         <!-- Bande d'annonce -->
         <div class="bande-annonce">
@@ -250,16 +256,18 @@
             <div class="contact-main">
                 <h1> Prenons contact </h1>
 
-                <form action="" method="get">
+                <form action="" method="get" id="form-contact">
                     <label for="email" class="lb-adresse">ADRESSE EMAIL</label>
                     <input type="email" name="email" id="email" placeholder="Adresse email">
+                    <span id="error-email"></span>
 
-                    <label for="" class="lb-newsletter">NEWSLETTER</label>
-                    <label class="lb-choix">En cochant cette case vous acceptez de recevoir l’actualité concernant les aventures de Batman :
-                    <input type="checkbox" name="" id="">
+                    <label for="accept" class="lb-newsletter">NEWSLETTER</label>
+                    <label for="accept" class="lb-choix">En cochant cette case vous acceptez de recevoir l’actualité concernant les aventures de Batman :
+                    <input type="checkbox" id="accept">
+                    <span id="error-accept"></span>
                     </label>
 
-                    <select name="" id="">
+                    <select name="" id="frequence">
                         <option value="">Choisissez la fréquence à laquelle vous souhaitez recevoir votre newsletter</option>
                         <option value="">Une fois par semaine</option>
                         <option value="">Une fois toutes les deux semaines(2fois par mois)</option>
@@ -267,15 +275,19 @@
                         <option value="">Une fois tous les trois mois</option>
                         <option value="">Une fois tous les six mois</option>
                     </select>
-                    <input type="text" name="type-new" id="" placeholder="Souhaitez-vous recevoir des news">
+                    <span id="error-frequence"></span>
+
+                    <input type="text" name="type-new" id="" placeholder="Souhaitez-vous recevoir des news" disabled>
                     <div class="div-formbtn">
-                        <a href="#" class="btn-form">Des films</a>
-                        <a href="#" class="btn-form">Des comics</a>
-                        <a href="#" class="btn-form">De tout</a>
+                        <input type="radio" name="choix" id="film"> <label class="btn-form" for="film">Des film</label>
+                        <input type="radio" name="choix" id="comics"> <label class="btn-form" for="comics">Des comics</label>
+                        <input type="radio" name="choix" id="tout"> <label class="btn-form" for="tout">De tout</label>
                     </div>
+                    <span id="error-choix"></span>
 
                     <label for="message" class="lb-message">MESSAGE</label>
-                    <textarea name="" id="" cols="30" rows="1" placeholder="Laissez un commentaire pour la communauté"></textarea>
+                    <textarea id="message" cols="30" rows="1" placeholder="Laissez un commentaire pour la communauté"></textarea>
+                    <span id="error-message"></span>
                     <input type="submit" value="CONFIRMER">
                 </form>
             </div>
@@ -309,20 +321,25 @@
         <div class="img-footer">
 
             <div class="logo-footer author">
-                <img src="ressources/Assets/Logos/logo_sayna_white.png" alt="logo SAYNA">
-                <img src="ressources/Assets/Logos/icon_x.png" alt="x">
-                <img src="ressources/Assets/Logos/icon_DC.png" alt="Logo DC">
+                <img src="ressources/Assets/Logos/logo_sayna_white.png" alt="logo SAYNA" class="yellow-hover">
+                <img src="ressources/Assets/Logos/icon_x.png" alt="x" class="yellow-hover">
+                <img src="ressources/Assets/Logos/icon_DC.png" alt="Logo DC" class="yellow-hover">
             </div>
 
             <div class="logo-footer social">
-                <a href="#"><img src="ressources/Assets/Logos/icon_facebook.png" alt="facebook"></a>
-                <a href="#"><img src="ressources/Assets/Logos/icon_ig.png" alt="Instagram"></a>
-                <a href="#"><img src="ressources/Assets/Logos/icon_tw.png" alt="Twitter"></a>
+                <a href="#"><img src="ressources/Assets/Logos/icon_facebook.png" alt="facebook" class="yellow-hover"></a>
+                <a href="#"><img src="ressources/Assets/Logos/icon_ig.png" alt="Instagram" class="yellow-hover"></a>
+                <a href="#"><img src="ressources/Assets/Logos/icon_tw.png" alt="Twitter" class="yellow-hover"></a>
             </div>
 
         </div>
     </footer>
     <!-- FIN PIEDS DE PAGE -->
+
+
+    <!-- INSERTION SCRIPT .JS -->
+    <script src="./ressources/scripts/home.js"></script>
+    <!-- FIN SCRIPT -->
 
 </body>
 
