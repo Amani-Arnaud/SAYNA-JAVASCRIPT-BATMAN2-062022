@@ -20,6 +20,7 @@ body {
 
 .intro-main {
     position: relative;
+    height: 90vh;
     .intro {
         margin: auto;
         margin-top: 250px;
@@ -34,7 +35,7 @@ body {
             }
         }
         .icon-down {
-            margin-top: 300px;
+            margin-top: 60vh;
         }
     }
     .logo-content {
@@ -55,12 +56,21 @@ body {
 
 // DEFINITION des propriété de la section QUIZ
 .intro-quiz {
+    h1 {
+        margin-bottom: 60px;
+    }
+}
+
+.quiz {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
+    p {
+        text-transform: none;
+    }
     .btn-quiz {
         text-decoration: none;
         color: colors.$white;
@@ -73,6 +83,79 @@ body {
         &:hover {
             transition: 5s;
             background-image: colors.$btn-gradient;
+        }
+        cursor: pointer;
+        margin-top: 60px;
+    }
+}
+
+.quiz-box {
+    display: none;
+    h1 {
+        text-align: center;
+    }
+    .question-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .quiz-question {
+            .question {
+                margin: 30px 0;
+            }
+            .response {
+                display: block;
+                background-color: colors.$pink;
+                width: 600px;
+                display: flex;
+                align-items: center;
+                margin: 20px 0px;
+                border-radius: 5px;
+                input {
+                    width: 30px;
+                    height: 30px;
+                    margin: 10px;
+                    border: 0;
+                }
+            }
+        }
+    }
+}
+
+.btn-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.popup-result {
+    position: fixed;
+    // display: flex;
+    display: none;
+    top: 0;
+    left: 10vw;
+    width: 80%;
+    height: 80vh;
+    .box-resultat {
+        width: 80%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(to bottom right, colors.$black-second, colors.$red-dark);
+        border-radius: 20px;
+        .btn-quiz {
+            text-align: center;
+            background-color: white;
+            border-radius: 20px;
+        }
+        h1 {
+            text-decoration: underline;
+        }
+        p {
+            margin-top: 20px;
+            text-align: center;
         }
     }
 }

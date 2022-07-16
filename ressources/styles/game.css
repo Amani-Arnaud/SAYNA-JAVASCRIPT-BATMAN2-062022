@@ -195,6 +195,7 @@ body {
 /* DEFINITION des propriété de la section Into ####################*/
 .intro-main {
   position: relative;
+  height: 90vh;
 }
 .intro-main .intro {
   margin: auto;
@@ -208,7 +209,7 @@ body {
   font-size: 4em;
 }
 .intro-main .intro .icon-down {
-  margin-top: 300px;
+  margin-top: 60vh;
 }
 .intro-main .logo-content {
   position: fixed;
@@ -223,7 +224,11 @@ body {
 }
 
 /* FIN section Intro ############################# */
-.intro-quiz {
+.intro-quiz h1 {
+  margin-bottom: 60px;
+}
+
+.quiz {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
@@ -231,7 +236,10 @@ body {
   justify-content: center;
   text-transform: uppercase;
 }
-.intro-quiz .btn-quiz {
+.quiz p {
+  text-transform: none;
+}
+.quiz .btn-quiz {
   text-decoration: none;
   color: #FFFFFF;
   font-family: "Rajdhani-Medium";
@@ -240,8 +248,78 @@ body {
   width: 300px;
   font-size: 1.5em;
   background-image: linear-gradient(to right, rgba(137, 0, 9, 0.6), #F8F184);
+  cursor: pointer;
+  margin-top: 60px;
 }
-.intro-quiz .btn-quiz:hover {
+.quiz .btn-quiz:hover {
   transition: 5s;
   background-image: linear-gradient(to right, rgba(237, 222, 191, 0.4), rgba(137, 0, 9, 0.6));
+}
+
+.quiz-box {
+  display: none;
+}
+.quiz-box h1 {
+  text-align: center;
+}
+.quiz-box .question-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.quiz-box .question-box .quiz-question .question {
+  margin: 30px 0;
+}
+.quiz-box .question-box .quiz-question .response {
+  display: block;
+  background-color: #C4C4C4;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+  border-radius: 5px;
+}
+.quiz-box .question-box .quiz-question .response input {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  border: 0;
+}
+
+.btn-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.popup-result {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 10vw;
+  width: 80%;
+  height: 80vh;
+}
+.popup-result .box-resultat {
+  width: 80%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom right, #0D0E09, #B11313);
+  border-radius: 20px;
+}
+.popup-result .box-resultat .btn-quiz {
+  text-align: center;
+  background-color: white;
+  border-radius: 20px;
+}
+.popup-result .box-resultat h1 {
+  text-decoration: underline;
+}
+.popup-result .box-resultat p {
+  margin-top: 20px;
+  text-align: center;
 }/*# sourceMappingURL=game.css.map */

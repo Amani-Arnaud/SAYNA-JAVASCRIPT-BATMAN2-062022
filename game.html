@@ -10,29 +10,28 @@
     <meta name="author" content="SIETIE">
     <title>PROJET BATMAN partie 2 | HOME</title>
     <link rel="stylesheet" href="./ressources/styles/game.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./ressources/scripts/jquery-3.6.0.js"></script>
 </head>
 
 <body>
     <!-- ENTÊTE DE LA PAGE -->
     <header id="header">
         <div class="container">
-
             <div class="header">
                 <img src="ressources/Assets/Logos/logohome.png" alt="logo home" class="yellow-hover">
                 <div class="menu">
-                    <a class="Accueil" href="index.html">HOME</a>
-                    <a class="Accueil active" href="game.html">GAME</a>
+                    <a class="Accueil yellow-hover" href="index.html">HOME</a>
+                    <a class="Accueil active yellow-hover" href="game.html">GAME</a>
                 </div>
             </div>
-
         </div>
-
     </header>
     <!-- FIN ENÊTE -->
 
 
     <!-- CORPS DE LA PAGE -->
-    <main class="container">
+    <main class="container main">
 
         <!-- la section princiaple qui contient le corps de la page -->
         <section class="intro-main">
@@ -61,11 +60,52 @@
 
         <!-- section QUIZ -->
         <section class="section-quiz" id="section-quiz">
-            <div class="intro-quiz" id="intro-quiz">
+
+            <!-- Section demarrer le quiz -->
+            <div class="intro-quiz quiz" id="intro-quiz">
                 <h1>connaissez vous bien le chevalier noir ?</h1>
                 <img src="./ressources/assets/game/Batgame_2.png" alt="Start"> <br>
-                <button type="submit" class="btn-quiz">démarrer le quiz</button>
+                <button type="submit" class="btn-quiz" id="btn-start">démarrer le quiz</button>
             </div>
+            <!-- Fin  -->
+
+            <!-- Debut chez des quiz -->
+            <div class="quiz-box quiz" id="quiz-box">
+                <h1> <span id="number-quiz">1</span>/<span id="total-quiz">10</span></h1>
+                <form action="" method="post" id="formulaire">
+                    <div class="question-box" id="question-box">
+                        <img src="./ressources/assets/game/Batgame_3.png" alt="illustration" id="img-illustrate">
+                        <div class="quiz-question" id="quiz-question">
+                            <p class="question" id="question">Batman ...</p>
+                            <span id="error-message"></span>
+                            <label for="checkbox1" class="response">
+                                <input type="checkbox" name="choix" id="checkbox1" value="">
+                                <p id="response" > 1 </p>
+                            </label>
+                            <label for="checkbox1" class="response">
+                                <input type="checkbox" name="choix" id="checkbox2" value="">
+                                <p id="response2" > 1 </p>
+                            </label>
+                            <label for="checkbox1" class="response">
+                                <input type="checkbox" name="choix" id="checkbox3" value="">
+                                <p id="response3" > 1 </p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="btn-box" id="btn-box">
+                        <input type="submit" class="btn-quiz" value="question suivante" id="btn-next">
+                    </div>
+                </form>
+            </div>
+            <div class="popup-result quiz" id="popup-result">
+                <div class="box-resultat">
+                    <h1 id="titre"> Titre</h1>
+                    <p id="msg-result">Message reçu !</p>
+                    <a href="./game.html" class="btn-quiz">Recommencer le Quiz</a>
+                </div>
+            </div>
+
+            <!-- Fin des quiz -->
         </section>
         <!-- Fin section QUIZ -->
 
