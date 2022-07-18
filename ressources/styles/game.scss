@@ -15,6 +15,17 @@ body {
     @include page_bg($bg-game);
 }
 
+// Propriété Canvas
+#div-canvas {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    cursor: none;
+}
+
+// Fin canvas
 
 /* DEFINITION des propriété de la section Into ####################*/
 

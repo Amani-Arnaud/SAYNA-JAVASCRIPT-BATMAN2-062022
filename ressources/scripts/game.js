@@ -1,11 +1,34 @@
 $(document).ready(function() {
 
+    // ############################################
+    // ## DEFINITION DES INDEPENDANTE AU QUIZ #####
+    // ############################################
+
     // Click sur le bouton demarrer le quiz
     $('#btn-start').click(function() {
         $('#quiz-box').slideDown(1000);
         $('#intro-quiz').slideUp(2000);
     });
     // Fin bouton demarrer
+
+    // #### Effet scroll
+    $('#top-arrow').click(function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+    });
+    $('#down-arrow').click(function() {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    });
+    // Fin effet scroll
+
+
+    // ############ [FIN FONCTION ANNEXE]##########
 
     // ################################
     // ## INTERRACTION AVEC L'API #####
@@ -48,14 +71,14 @@ $(document).ready(function() {
                             $('#btn-next').val('Voir le resultat').attr("id", "btn-resume");
                         }
                         console.log(userResponse);
-                        totalPoint = userResponse === "true" ? (totalPoint + 1) : totalPoint; // Si c'est une bonne reponse augmenter le total des points
+                        totalPoint = userResponse === true ? (totalPoint + 1) : totalPoint; // Si c'est une bonne reponse augmenter le total des points
                         userResponse = "false"; // nouvelle question fausse reponse
                         console.log(totalPoint);
                     }
                 } else {
                     if (isChoose) {
                         console.log(userResponse);
-                        totalPoint = userResponse === "true" ? (totalPoint + 1) : totalPoint; // Si c'est une bonne reponse augmenter le total des points
+                        totalPoint = userResponse === true ? (totalPoint + 1) : totalPoint; // Si c'est une bonne reponse augmenter le total des points
                         console.log(totalPoint);
                         if (totalPoint <= (totalQuiz / 3)) {
                             $('#titre').text("0" + totalPoint + "/" + totalQuiz + " c'est pas tout à fait ça...");
@@ -84,13 +107,14 @@ $(document).ready(function() {
     function isChooseResponse(questions, currentQuiz) {
         // Variable locale
         let notChoose = true;
-        let userResponse = "false"; // [par la suite] faire de cette variable un tableau qui recupere les reponses de User
+        let userResponse = false; // [par la suite] faire de cette variable un tableau qui recupere les reponses de User
 
         // Controle si l'utilisateur à choisir une reponse
         for (let i = 0; i < questions[currentQuiz].response.length; i++) {
             if ($('#checkbox' + i).is(":checked")) {
                 notChoose = false;
-                userResponse = $('#checkbox' + i).val();
+                userResponse = questions[currentQuiz].response[i].isGood;
+                console.log(questions[currentQuiz].response[i].isGood);
             }
         }
         // Fin controle
@@ -114,7 +138,7 @@ $(document).ready(function() {
         $('#question').text(question);
         for (let i = 0; i < response.length; i++) {
             $('#quiz-question').append("<label for='checkbox" + i + "' class='response' id ='" + i + "'></label>");
-            $('#' + i).append("<input type='checkbox' name='choix' id='checkbox" + i + "' value='" + response[i].isGood + "'>");
+            $('#' + i).append("<input type='checkbox' name='choix' id='checkbox" + i + "'>");
             $('#' + i).append("<p id='response" + i + "' > " + response[i].text + " </p>");
         }
         $('#quiz-question').append("<span id='error-message'></span>");

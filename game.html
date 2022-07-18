@@ -29,6 +29,20 @@
     </header>
     <!-- FIN ENÊTE -->
 
+    <!--
+     ######################### [NOTE] ###########################
+    # L'effet canvas (une fois activé) etendu sur tout l'ecran #
+    # désactive tout effet sur le page (DOM)                   #
+    # aucune action n'est plus poss                            #
+    ############################################################
+     -->
+    <!-- Rajout de CANAVAS avec un effet chauve souris sur le curseur -->
+    <!-- <div id="div-canvas">
+        <canvas id="canvas"></canvas>
+        <img src="./ressources/assets/Logos/logohome.png" alt="curseur image" id="img-curseur">
+    </div> -->
+    <!-- Fin -->
+
 
     <!-- CORPS DE LA PAGE -->
     <main class="container main">
@@ -38,9 +52,7 @@
             <!-- section pour d'introduction  -->
             <div class="intro">
                 <div class="content">
-                    <h1>
-                        Let's play a <br> little game...
-                    </h1>
+                    <h1> Let's play a <br> little game... </h1>
                 </div>
                 <div class="icon-down">
                     <img src="ressources/Assets/Logos/flèche_down_header.png" alt="plus">
@@ -48,11 +60,11 @@
             </div>
 
             <div class="logo-content">
-                <a href="#header"><img src="ressources/Assets/Logos/logo_bat_flèche.png" alt="fleche haut" class="arrow up yellow-hover"></a>
+                <img src="ressources/Assets/Logos/logo_bat_flèche.png" alt="fleche haut" class="arrow up yellow-hover" id="top-arrow">
                 <img src="ressources/Assets/Logos/icon_facebook.png" alt="icon facebook" class="social-logo yellow-hover">
                 <img src="ressources/Assets/Logos/icon_ig.png" alt="icon instagrame" class="social-logo yellow-hover">
                 <img src="ressources/Assets/Logos/icon_tw.png" alt="icon twitter" class="social-logo yellow-hover">
-                <a href="#contact"><img src="ressources/Assets/Logos/logo_bat_flèche_2.png" alt="icon twitter" class="arrow down yellow-hover"></a>
+                <img src="ressources/Assets/Logos/logo_bat_flèche_2.png" alt="icon twitter" class="arrow down yellow-hover" id="down-arrow">
             </div>
             <!-- FIN section intro -->
         </section>
@@ -142,6 +154,7 @@
 
     <!-- INSERTION DES SCRIPT .JS  -->
     <script src="./ressources/scripts/game.js"></script>
+    <script src="./ressources/scripts/canvas.js"></script>
     <!-- FIN SCRIPT -->
 </body>
 

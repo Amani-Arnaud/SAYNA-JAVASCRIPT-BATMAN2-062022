@@ -40,4 +40,24 @@ window.onload = function() {
     body.onclick = function() {
         document.getElementById('popup').style.display = 'none';
     }
+
+
+    // #### Effet scroll
+    $('#top-arrow').click(function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+    });
+    $('#down-arrow').click(function() {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    });
+    // Fin effet scroll
+
+    // Effet en scrollant
+    // Fin
 }

@@ -192,6 +192,15 @@ body {
   background-color: black;
 }
 
+#div-canvas {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: none;
+}
+
 /* DEFINITION des propriété de la section Into ####################*/
 .intro-main {
   position: relative;
